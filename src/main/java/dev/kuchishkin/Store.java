@@ -252,7 +252,7 @@ public class Store {
         System.out.println("Задание 8:");
         BigDecimal task8 = customers.stream()
                 .flatMap(customer -> customer.getOrders().stream())
-                .filter(order -> order.getOrderDate().getMonthValue() == 3 && order.getOrderDate().getYear() == 2021)
+                .filter(order -> order.getOrderDate().getMonthValue() == 2 && order.getOrderDate().getYear() == 2021)
                 .flatMap(order -> order.getProducts().stream())
                 .map(Product::getPrice)
                 .reduce(BigDecimal.ZERO, BigDecimal::add);
